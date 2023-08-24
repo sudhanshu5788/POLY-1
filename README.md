@@ -1,35 +1,34 @@
 Polygon-Advanced-Module-1
-This is the first project in Polygon-Advance, in this project, I was tasked to deploy an NFT collection on the Ethereum blockchain, Map the collection to Polygon, and Transfer assets over via the Polygon Bridge.
+Commencing the inaugural project within Polygon-Advance, the objective encompassed the deployment of an NFT collection onto the Ethereum blockchain. Additionally, the task involved mapping the said collection to Polygon and effectuating asset transfers through the utilization of the Polygon Bridge.
 
-Getting Started
-Executing program
-Download the codes by downloading the entire repository which will give you access to other contents of the repository. Navigate to the Poly_Proof project directory, run:
+Initial Steps
+Initiating the process involves obtaining the source code. This can be accomplished by downloading the complete repository, granting access to various other repository contents. Upon acquiring the repository, navigate towards the Poly_Proof project directory and execute the following command:
 
- npm install
-After installing the dependencies, run the test file by using the following command:
+npm install
+Once the dependencies are successfully installed, proceed by running the test file using this command:
 
 npx hardhat test
 Deploying the ERC721 Contract
-Before deploying, make sure to rename ".env.example" to ".env" and provide your wallet private key where required i.e. "PRIVATE_KEY= 'your wallet private key'". Run the following command to deploy the ERC721 contract to the Goerli Ethereum Testnet:
+Preceding deployment, it's imperative to rename the file ".env.example" to ".env". Within the newly renamed file, furnish your wallet's private key where prompted, as indicated: "PRIVATE_KEY= 'your wallet private key'". Execute the ensuing command to deploy the ERC721 contract on the Goerli Ethereum Testnet:
 
 npx hardhat run scripts/deploy.js --network goerli 
-NOTE:
-After deploying the address will generate. So, copy that address into contarctAddress.js(stored in metadata folder) and also in batchMint.js(stored in scripts folder)
+Note:
+Following deployment, an address will be generated. This address must be copied into both contractAddress.js (located in the metadata folder) and batchMint.js (stored within the scripts folder).
 
-The script will deploy the contract
+This script's execution will culminate in the successful deployment of the contract.
 
-Batch Mint NFTs
-Run the following command to batch-mint NFTs using the deployed ERC721 contract:
+Batch Minting NFTs
+Execute the subsequent command to undertake the batch-minting process for NFTs using the previously deployed ERC721 contract:
 
 npx hardhat run scripts/batchMint.js --network goerli
-The script will mint the specified number of NFTs and assign them to your address.
+The script will facilitate the creation of a designated number of NFTs, subsequently assigning ownership to your address.
 
-Approve and Deposit NFTs to Polygon Mumbai
-Run the following commands to approve and deposit the minted NFTs from Ethereum to the Polygon Mumbai network using the FxPortal Bridge:
+Authorization and NFT Deposit to Polygon Mumbai
+To seamlessly authorize and transfer the minted NFTs from the Ethereum network to the Polygon Mumbai network, implement the following commands:
 
 npx hardhat run scripts/approveDeposit.js --network goerli
-Author
-Geet Kiran
 
-License
-This project is licensed under the MIT License. You can make a copy of the project to use for your own purposes.
+Author
+Sudhanshu Shekhar
+
+
